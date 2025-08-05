@@ -10,6 +10,14 @@ import icons from "../../constants/icons";
 import { styles } from "./home-styles";
 
 function Home() {
+  function OpenPassenger() {
+    Alert.alert("Clicou Passageiro");
+  }
+
+  function OpenDriver() {
+    Alert.alert("Clicou Motorista");
+  }
+
   return (
     <>
       <ImageBackground source={icons.bg} style={styles.bg} resizeMode="cover">
@@ -23,13 +31,13 @@ function Home() {
           source={icons.logo}
           resizeMode="none"
         />
-        <TouchableOpacity onPress={() => Alert.alert("Clicou Passageiro")}>
+        <TouchableOpacity onPress={() => OpenPassenger()}>
           <View
             style={{
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              marginTop: -35,
+              marginTop: -40,
               width: "100vw",
             }}
           >
@@ -56,7 +64,7 @@ function Home() {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => Alert.alert("Clicou Motorista")}>
+        <TouchableOpacity onPress={() => OpenDriver()}>
           <View
             style={{
               display: "flex",
